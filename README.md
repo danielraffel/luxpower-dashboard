@@ -1,9 +1,9 @@
 # Lux Power Distribution Dashboard for Home Assistant
 
-This repository provides a [Home Assistant](https://www.home-assistant.io) dashboard view for monitoring your [EG4 EG4 18kPV Hybrid Inverter](https://eg4electronics.com/categories/inverters/eg4-18kpv-12lv-all-in-one-hybrid-inverter/) solar power system. It requires the **[Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card)** and a **[monitory.solar dongle](https://monitormy.solar/detail/13)**.
+This repository provides a [Home Assistant](https://www.home-assistant.io) dashboard view for monitoring your [EG4 EG4 18kPV Hybrid Inverter](https://eg4electronics.com/categories/inverters/eg4-18kpv-12lv-all-in-one-hybrid-inverter/) solar power system. It requires the **[Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card)** and a **[monitormy.solar dongle](https://monitormy.solar/detail/13)**.
 
 The dashboard assumes:
-1. You've integrated the **monitory.solar dongle** with Home Assistant.
+1. You've integrated the **monitormy.solar dongle** with Home Assistant.
 2. You want the view shown in the screenshot below:
 
 ![Dashboard Screenshot](./screenshot.jpeg)
@@ -46,14 +46,14 @@ To display the dashboard correctly, you need to modify the `lux.yaml` configurat
 You’ll need to replace every instance of the **dongle MacID** (`dongle_40_4c_ca_4c_XX_XX`) with your own unique dongle MacID.  
 - **Where to Find Your MacID:**  
   - Available via **Home Assistant** under the MQTT sensors.
-  - Can also be retrieved from the portal running on the **monitory.solar dongle**.
+  - Can also be retrieved from the portal running on the **monitormy.solar dongle**.
 
 Once the prerequisites are satisfied, copy and paste the content of `lux.yaml` into a dashboard view in Home Assistant.
 
 ---
 
 ### 2. Adjust the Time Display  
-The `lux.yaml` dashboard view provides a **cleaner and more readable timestamp** than the default **Last Bank Update** from the monitory.solar dongle (which defaults to UTC time and shows microseconds). By default, `lux.yaml` uses a template sensor to format the timestamp. You can skip this step if you prefer, but you’ll need to modify the configuration to use the raw timestamp instead. 
+The `lux.yaml` dashboard view provides a **cleaner and more readable timestamp** than the default **Last Bank Update** from the monitormy.solar dongle (which defaults to UTC time and shows microseconds). By default, `lux.yaml` uses a template sensor to format the timestamp. You can skip this step if you prefer, but you’ll need to modify the configuration to use the raw timestamp instead. 
 
 #### **Time Zone Configuration (Optional but very nice)**  
 Add the following to your `configuration.yaml` in Home Assistant to convert the UTC timestamp from the dongle into your local time zone. This example formats the time in **Pacific Standard Time (PST)** and omits seconds for simplicity. Note: you will need to update this with your MacID.
