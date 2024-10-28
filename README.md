@@ -6,7 +6,7 @@ The dashboard assumes:
 1. You've integrated the **monitormy.solar dongle** with Home Assistant.
 2. You want the view shown in the screenshot below:
 
-![Dashboard Screenshot](./screenshot.jpeg)
+![Dashboard Screenshot](./screenshot.png)
 
 ### Icon Descriptions:
 - ☀️ **Solar yield (today)**  
