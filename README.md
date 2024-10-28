@@ -1,12 +1,20 @@
 # Lux Power Distribution Dashboard for Home Assistant
 
-This repository provides a [Home Assistant](https://www.home-assistant.io) dashboard view for monitoring your [EG4 EG4 18kPV Hybrid Inverter](https://eg4electronics.com/categories/inverters/eg4-18kpv-12lv-all-in-one-hybrid-inverter/) solar power system. It requires the **[Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card)** and a **[monitormy.solar dongle](https://monitormy.solar/detail/13)**.
+This repository provides a [Home Assistant](https://www.home-assistant.io) dashboard view for monitoring your [EG4 EG4 18kPV Hybrid Inverter](https://eg4electronics.com/categories/inverters/eg4-18kpv-12lv-all-in-one-hybrid-inverter/) solar power system. It requires the [Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card) and a [monitormy.solar dongle](https://monitormy.solar/detail/13).
 
 The dashboard assumes:
 1. You've integrated the **monitormy.solar dongle** with Home Assistant.
 2. You want the view shown in the screenshot below:
 
 ![Dashboard Screenshot](./screenshot.jpeg)
+
+### Icon Descriptions:
+- ☀️ **Solar yield (today)**  
+- 🔋 **How much battery was charged (today)**  
+- 🪫 **How much battery was drained (today)**  
+- 🏡 **How much power the home consumed (today)**  
+- ← **How much energy was sent to the grid (today)**  
+- → **How much energy was used from the grid (today)**
 
 ---
 
@@ -30,8 +38,11 @@ The dashboard assumes:
 7. **Monitor My Solar Integration via HACS**  
    Install MonitorMy.Solar through HACS for seamless data integration from your solar setup. Technically, they also have a [GitHub repo](https://github.com/zakery292/monitormysolar) but there's no need to install this way since it's published in the HACS store.
 
-8. **Lux Power Distribution Card**  
+8. **Lux Power Distribution Card via HACS**  
    Install the custom card from [Dante Winters' repository](https://github.com/DanteWinters/lux-power-distribution-card). Thanks to Dante Winters for integrating the LuxPower animation and business logic. It works perfectly with the MonitorMy.Solar dongle when connected to the correct sensor states which are pre-configured in `lux.yaml`.
+
+9. **Simple Weather Card via HACS**  
+   Install the Simple Weather card to get todays weather data for your home.
 
 ---
 
