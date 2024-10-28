@@ -1,6 +1,6 @@
 # Lux Power Distribution Dashboard for Home Assistant
 
-This repository provides a [Home Assistant](https://www.home-assistant.io) dashboard view for monitoring your [EG4 EG4 18kPV Hybrid Inverter](https://eg4electronics.com/categories/inverters/eg4-18kpv-12lv-all-in-one-hybrid-inverter/) solar power system. It requires the [Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card) and a [monitormy.solar dongle](https://monitormy.solar/detail/13) amongst other things described below.
+This repository provides a [Home Assistant](https://www.home-assistant.io) dashboard view for monitoring your [EG4 EG4 18kPV Hybrid Inverter](https://eg4electronics.com/categories/inverters/eg4-18kpv-12lv-all-in-one-hybrid-inverter/) solar power system. It requires, amongst other things, the [Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card) and a [monitormy.solar dongle](https://monitormy.solar/detail/13).
 
 The dashboard assumes:
 1. You've integrated the **monitormy.solar dongle** with Home Assistant.
