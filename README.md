@@ -13,8 +13,8 @@ The dashboard assumes:
 - 🔋 **How much battery was charged (today)**  
 - 🪫 **How much battery was drained (today)**  
 - 🏡 **How much power the home consumed (today)**  
-- ← Grid **How much energy was used from the grid (today)**  
-- → Grid **How much energy was sent to the grid (today)**
+- ← **Grid: How much energy was used from the grid (today)**  
+- → **Grid: How much energy was sent to the grid (today)**
 
 ---
 
