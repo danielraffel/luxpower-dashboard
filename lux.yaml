@@ -1,0 +1,65 @@
+views:
+  - title: ☀️ 1431 Today
+    path: home
+    cards:
+      - show_name: true
+        show_icon: false
+        show_state: true
+        type: glance
+        entities:
+          - entity: sensor.dongle_40_4c_ca_4c_XX_XX_epv_all
+            name: ☀️
+          - entity: sensor.dongle_40_4c_ca_4c_XX_XX_echg_day
+            name: 🔋
+          - entity: sensor.dongle_40_4c_ca_4c_XX_XX_edischg_day
+            name: 🪫
+          - entity: sensor.dongle_40_4c_ca_4c_XX_XX_einv_day
+            name: 🏡
+      - type: custom:lux-power-distribution-card
+        inverter_count: 1
+        battery_soc:
+          entities:
+            - sensor.dongle_40_4c_ca_4c_XX_XX_soc
+        battery_flow:
+          entities:
+            - sensor.dongle_40_4c_ca_4c_XX_XX_batteryflow_live
+        home_consumption:
+          entities:
+            - sensor.dongle_40_4c_ca_4c_XX_XX_pload
+        grid_flow:
+          entities:
+            - sensor.dongle_40_4c_ca_4c_XX_XX_gridflow_live
+        pv_power:
+          entities:
+            - sensor.dongle_40_4c_ca_4c_XX_XX_pall
+          show_individual: false
+        battery_voltage:
+          entities:
+            - sensor.dongle_40_4c_ca_4c_XX_XX_vbat
+        update_time:
+          entities:
+            - sensor.last_bank_update_formatted
+          show_last_update: true
+        grid_indicator:
+          hue: true
+        status_codes:
+          entities:
+            - sensor.dongle_40_4c_ca_4c_XX_XX_warningcode
+          no_grid_is_warning: true
+        refresh_button: right
+      - show_name: true
+        show_icon: false
+        show_state: true
+        type: glance
+        entities:
+          - entity: sensor.dongle_40_4c_ca_4c_XX_XX_etouser_day
+            name: ← Grid
+          - entity: sensor.dongle_40_4c_ca_4c_XX_XX_etogrid_day
+            name: → Grid
+      - show_current: true
+        show_forecast: true
+        type: weather-forecast
+        entity: weather.forecast_home
+        forecast_type: daily
+        theme: minimalist-desktop
+    badges: []
