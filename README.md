@@ -9,10 +9,10 @@ The dashboard assumes:
 ![Dashboard Screenshot](./screenshot.png)
 
 ### Icon Descriptions:
-- ☀️ **Solar yield (today)**  
-- 🔋 **How much battery was charged (today)**  
-- 🪫 **How much battery was drained (today)**  
-- 🏡 **How much power the home consumed (today)**  
+- ☀️ **Solar yield from all arrays (today)**  
+- 🔋 **How much all batteries were charged (today)**  
+- 🪫 **How much all batteries were drained (today)**  
+- 🏡 **How much total power the home consumed (today)**  
 - ← **Grid: How much energy was used from the grid (today)**  
 - → **Grid: How much energy was sent to the grid (today)**
 
