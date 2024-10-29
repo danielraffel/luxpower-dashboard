@@ -101,7 +101,7 @@ sensor.dongle_40_4c_ca_4c_XX_XX_last_bank_update
 Should it provide useful below are the setup scripts and configuration details used for my environment.
 
 ### Mosquitto Password and File Directory Configuration
-_This was used to configure Mosquitto on the VM. I installed everything in `/opt` so you might want to change directories if using the same location._
+_This was used to set up Mosquitto on the VM. Since I installed everything in `/opt`, you will want to change to that directory before running these commands if you intend to use the same location._
 
 **1. Set Up Directories and Permissions**  
 The Mosquitto Docker container is configured to run with a **specific user and group**, both assigned the **UID and GID of 1883**. This ensures consistent ownership and access control within the container.
