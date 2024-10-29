@@ -267,13 +267,13 @@ This structure mirrors my Home Assistant setup on the VM, including where my Doc
 - **`custom_components/`**: Directory for custom integrations or components.
 - **`themes/`** and **`tts/`**: Directories for themes and text-to-speech files.
 - **`secrets.yaml`**: Secure storage for sensitive data.
-- **`ui_lovelace_minimalist/`**: Likely stores a custom UI configuration.
+- **`ui_lovelace_minimalist/`**: Ui Lovelace Minimalist custom UI configuration.
 - **`www/`**: Web-accessible files.
 ---
 
 ## Additional Notes About my Setup
 
-- **Firewall:** Since the dongle isn’t connected to my Tailscale network, and I’m running Home Assistant in a VM, I have configured GCP’s firewall to open port 1883 exclusively for my home IP address, enabling MQTT communication.
+- **Firewall:** Since the dongle isn’t connected to my Tailscale network, and I’m running Home Assistant in a VM, I have configured GCP’s firewall to open port 1883 exclusively for my home IP address, enabling MQTT communication. *
 - **Tailscale:** I am using Tailscale to securely access my cloud-hosted Home Assistant instance only for people on my tailnet.
 - **Why two password_files?:** Not sure—I probably created one in the root directory by mistake. I could delete the one in root, but I’d rather not mess with something that’s working. 😄
 
