@@ -300,7 +300,7 @@ This structure mirrors my Home Assistant setup on the VM, including where my Doc
 - **Firewall:** Since the dongle isn’t connected to my Tailscale network, and I’m running Home Assistant in a VM, I have configured GCP’s firewall to open port 1883 exclusively for my home IP address, enabling MQTT communication. *
 - **Tailscale:** I am using Tailscale to securely access my cloud-hosted Home Assistant instance only for people on my tailnet.
 - **Why two password_files?:** Not sure—I probably created one in the root directory by mistake. I could delete the one in root, but I’d rather not mess with something that’s working. 😄
-* **Securing the EG4** Wireshark indicates that EG4 dongle traffic lacks SSL support, so I’ll be updating my setup to route traffic through a local MQTT broker on my Tailscale network to the cloud-based Home Assistant VM, and once I do that I’ll close the open MQTT port on the VM. I've walked through how I did that below under _Optional: Secure MQTT Relay Setup on macOS over Tailnet_.
+- **Securing the EG4** Wireshark indicates that EG4 dongle traffic lacks SSL support, so I’ll be updating my setup to route traffic through a local MQTT broker on my Tailscale network to the cloud-based Home Assistant VM, and once I do that I’ll close the open MQTT port on the VM. I've walked through how I did that below under _Optional: Secure MQTT Relay Setup on macOS over Tailnet_. I've also used the dongle to disable access to anything but my MQTT Broker (eg no longer sharing data with EG4).
 
 ---
 ### Optional: Secure MQTT Relay Setup on macOS over Tailnet 🔐
