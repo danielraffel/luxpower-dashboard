@@ -125,20 +125,44 @@ sudo chown -R mosquitto: /opt/mosquitto
 This setup ensures that the Mosquitto container has the necessary permissions to access its configuration, data, and log files.
 
 
-**2. Install Mosquitto:**
-_This was necessary for me to setup a Mosquitto password file._
+**2. Install Mosquitto:**  
+   _This was necessary for me to setup a Mosquitto password file and is not part of the Docker Compose install I am sharing below._
    ```bash
    sudo apt update
    sudo apt install mosquitto
    ```
 
 **3. Create Password File:**  
+   _This command will create a password file from which you can retrieve your password. Replace <username> with the desired username you want to use with your MQTT broker._
    ```bash
    mosquitto_passwd -c /mosquitto/config/password_file <username>
    ```
+
+**4. Create /opt/mosquitto/config/mosquitto.conf:**  
+   _This enables data persistence and specifies the location for Mosquitto to log data._
+```
+persistence true
+persistence_location /mosquitto/data/
+log_dest file /mosquitto/log/mosquitto.log
+log_dest stdout
+log_type all
+listener 1883
+protocol mqtt
+listener 9001
+protocol websockets
+allow_anonymous false
+password_file /mosquitto/config/password_file
+```
    
-**4. MQTT Debugging Tool:**  
+**5. MQTT Debugging Tool:**  
    Use [MQTTX](http://mqttx.app) to test and debug MQTT connections.
+
+### Setup Folder for Home Assistant
+_Create the root folder for Home Assistant before installing with server setup script._
+
+```
+sudo mkdir -p /opt/homeassistant_config
+```
 
 ### Server Setup Script
 _This was used to install Docker and Tailscale. Should you install Tailscale you will need to uncomment that line. Also, additional steps required to configure Tailscale. For example, [on GCP follow this Tailscale setup guide](https://tailscale.com/kb/1147/cloud-gce)._
@@ -206,7 +230,7 @@ services:
 ```
 ---
 ## Directory Structure and Files
-This structure mirrors my Home Assistant setup on the VM, including where my Docker Compose file, Setup script and MQTT integration live (along with a few additional components not detailed here).
+This structure mirrors my Home Assistant setup on the VM, including where my Docker Compose file, Setup script and MQTT integration live (along with a few additional components which I installed but are not detailed here).
 
 ```
 /opt
