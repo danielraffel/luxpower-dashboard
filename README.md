@@ -1,5 +1,23 @@
 # Lux Power Distribution Dashboard for Home Assistant
 
+## Table of Contents
+- [Lux Power Distribution Dashboard for Home Assistant](#lux-power-distribution-dashboard-for-home-assistant)
+- [Prerequisites](#prerequisites)
+- [Setup Overview](#setup-overview)
+  - [1. Configure Your Dashboard View](#1-configure-your-dashboard-view)
+  - [2. Adjust the Time Display](#2-adjust-the-time-display)
+- [Appendix: Server Setup Scripts, Home Assistant and MQTT Configuration](#appendix-server-setup-scripts-home-assistant-and-mqtt-configuration)
+  - [Mosquitto Password and File Directory Configuration](#mosquitto-password-and-file-directory-configuration)
+  - [Setup Folder for Home Assistant](#setup-folder-for-home-assistant)
+  - [Server Setup Script](#server-setup-script)
+  - [Docker Compose Configuration](#docker-compose-configuration)
+- [Directory Structure and Files](#directory-structure-and-files)
+- [Additional Notes About my Setup](#additional-notes-about-my-setup)
+- [Optional: Secure MQTT Relay Setup on macOS over Tailnet 🔐](#optional-secure-mqtt-relay-setup-on-macos-over-tailnet-)
+  - [Steps to Set Up the Relay](#steps-to-set-up-the-relay)
+- [Troubleshooting Homebrew Services Issue](#troubleshooting-homebrew-services-issue)
+
+---
 This repository provides a [Home Assistant](https://www.home-assistant.io) dashboard view for monitoring your [EG4 EG4 18kPV Hybrid Inverter](https://eg4electronics.com/categories/inverters/eg4-18kpv-12lv-all-in-one-hybrid-inverter/) solar power system. It requires, amongst other things, the [Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card) and a [monitormy.solar dongle](https://monitormy.solar/detail/13).
 
 The dashboard assumes:
@@ -19,24 +37,6 @@ The dashboard assumes:
 Note: Additional grid indicators explained [here](https://github.com/DanteWinters/lux-power-distribution-card?tab=readme-ov-file#grid-indicators)
 
 ---
-## Table of Contents
-- [Lux Power Distribution Dashboard for Home Assistant](#lux-power-distribution-dashboard-for-home-assistant)
-- [Prerequisites](#prerequisites)
-- [Setup Overview](#setup-overview)
-  - [1. Configure Your Dashboard View](#1-configure-your-dashboard-view)
-  - [2. Adjust the Time Display](#2-adjust-the-time-display)
-- [Appendix: Server Setup Scripts, Home Assistant and MQTT Configuration](#appendix-server-setup-scripts-home-assistant-and-mqtt-configuration)
-  - [Mosquitto Password and File Directory Configuration](#mosquitto-password-and-file-directory-configuration)
-  - [Setup Folder for Home Assistant](#setup-folder-for-home-assistant)
-  - [Server Setup Script](#server-setup-script)
-  - [Docker Compose Configuration](#docker-compose-configuration)
-- [Directory Structure and Files](#directory-structure-and-files)
-- [Additional Notes About my Setup](#additional-notes-about-my-setup)
-- [Optional: Secure MQTT Relay Setup on macOS over Tailnet 🔐](#optional-secure-mqtt-relay-setup-on-macos-over-tailnet-)
-  - [Steps to Set Up the Relay](#steps-to-set-up-the-relay)
-- [Troubleshooting Homebrew Services Issue](#troubleshooting-homebrew-services-issue)
----
-
 ## Prerequisites
 
 1. **Home Assistant**  
