@@ -1,5 +1,7 @@
 # Lux Power Distribution Dashboard for Home Assistant
 
+**tldr:** This guide provides everything you need to do to set up a simple Dashboard in Home Assistant to securely monitor your EG4 solar inverter in real-time.
+
 ## Table of Contents
 - [Lux Power Distribution Dashboard for Home Assistant](#lux-power-distribution-dashboard-for-home-assistant)
 - [Prerequisites](#prerequisites)
