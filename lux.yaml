@@ -1,5 +1,5 @@
 views:
-  - title: ☀️ 1431 Today
+  - title: ☀️ Today
     path: home
     cards:
       - show_name: true
