@@ -304,3 +304,70 @@ This structure mirrors my Home Assistant setup on the VM, including where my Doc
 ---
 
 Enjoy monitoring your solar system with this customized dashboard! 🚀
+
+---
+Here’s the **optional setup for installing MQTT as a relay on macOS** to ensure encrypted data transmission from your **dongle to a Tailscale VM**. Below are both versions — one with placeholders and one with your actual credentials. Add these steps at the **end of the README**, under a new section titled **"Optional: Secure MQTT Relay Setup on macOS"**.
+
+---
+
+### Optional: Secure MQTT Relay Setup on macOS over Tailnet 🔐
+This guide explains how to configure a Mac mini on your Tailscale network as an MQTT relay, allowing local data transmission from the dongle to the Mac mini without encryption, and securely forwarding the data from the Mac mini to a Tailscale-connected VM.
+
+#### **Prerequisites:**
+- Tailscale installed and connected on both the Mac mini and VM.
+- The Mac mini is accessible on the same local network as the dongle.
+
+---
+
+### **Steps to Set Up the Relay**
+
+1. **Install Mosquitto on macOS:**
+   ```bash
+   brew install mosquitto
+   brew services start mosquitto
+   ```
+
+2. **Configure Mosquitto to Relay MQTT Data:**
+   Open the Mosquitto config file:
+   ```bash
+   nano /usr/local/etc/mosquitto/mosquitto.conf
+   ```
+
+   Add the following configuration:
+   ```conf
+   # Listener for local MQTT traffic
+   listener 1883 0.0.0.0
+   allow_anonymous true
+
+   # Bridge configuration to relay to Tailscale VM
+   connection tailscale_bridge
+   address <VM_IP>:1883
+   remote_username <MQTT_USERNAME>
+   remote_password <MQTT_PASSWORD>
+   topic # both 0
+   ```
+
+3. **Restart Mosquitto:**
+   ```bash
+   brew services restart mosquitto
+   ```
+
+4. **Configure the Dongle:**
+   - **MQTT Server**: IP of the Mac mini (e.g., `192.168.x.x`)
+   - **Port**: 1883  
+   - **Credentials**: Leave blank if `allow_anonymous true` is used.
+
+5. **Verify Communication:**
+   - From the VM, subscribe to all topics:
+     ```bash
+     mosquitto_sub -h <VM_IP> -p 1883 -u <MQTT_USERNAME> -P <MQTT_PASSWORD> -t "#"
+     ```
+   - From the dongle or Mac mini, publish a test message:
+     ```bash
+     mosquitto_pub -h 192.168.x.x -p 1883 -t "test/topic" -m "Hello MQTT!"
+     ```
+
+6. **Close Public MQTT Port on VM (Optional):**
+   ```bash
+   sudo ufw deny 1883/tcp
+   ```
