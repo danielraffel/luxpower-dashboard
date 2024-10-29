@@ -326,7 +326,7 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
    nano /usr/local/etc/mosquitto/mosquitto.conf
    ```
 
-   Add the following configuration:
+   Add the following configuration making sure to **use the Tailscale IP of the VM** not the public IP:
    ```conf
    # Listener for local MQTT traffic
    listener 1883 0.0.0.0
@@ -334,7 +334,7 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
 
    # Bridge configuration to relay to Tailscale VM
    connection tailscale_bridge
-   address <VM_IP>:1883
+   address <TAILSCALE_VM_IP>:1883
    remote_username <MQTT_USERNAME>
    remote_password <MQTT_PASSWORD>
    topic # both 0
@@ -350,7 +350,12 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
    - **Port**: 1883  
    - **Credentials**: Leave blank if `allow_anonymous true` is used.
 
-5. **Verify Communication:**
+5. **Update the GCP Firewall Rule:**
+   - In the Google Cloud Console, go to VPC network → Firewall rules and update the existing rule. Since Tailscale IPs are stable but not guaranteed to be static, it’s recommended to allow the entire Tailscale subnet in your GCP firewall rule to ensure consistent connectivity. While you can use the Mac mini’s specific Tailscale IP, be aware that it could change, requiring you to update the rule if it stops working.
+   ```bash
+   100.64.0.0/10
+   ```
+6. **Verify Communication:**
    - From the VM, subscribe to all topics:
      ```bash
      mosquitto_sub -h <VM_IP> -p 1883 -u <MQTT_USERNAME> -P <MQTT_PASSWORD> -t "#"
@@ -360,10 +365,6 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
      mosquitto_pub -h 192.168.x.x -p 1883 -t "test/topic" -m "Hello MQTT!"
      ```
 
-6. **Close Public MQTT Port on VM (Optional):**
-   ```bash
-   sudo ufw deny 1883/tcp
-   ```
 ### **Troubleshooting Homebrew Services Issue**
 
 On macOS, if you encounter the following error during the Mosquitto installation:  
