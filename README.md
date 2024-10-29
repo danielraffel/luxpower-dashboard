@@ -300,16 +300,9 @@ This structure mirrors my Home Assistant setup on the VM, including where my Doc
 - **Firewall:** Since the dongle isn’t connected to my Tailscale network, and I’m running Home Assistant in a VM, I have configured GCP’s firewall to open port 1883 exclusively for my home IP address, enabling MQTT communication. *
 - **Tailscale:** I am using Tailscale to securely access my cloud-hosted Home Assistant instance only for people on my tailnet.
 - **Why two password_files?:** Not sure—I probably created one in the root directory by mistake. I could delete the one in root, but I’d rather not mess with something that’s working. 😄
+* **Securing the EG4** Wireshark indicates that EG4 dongle traffic lacks SSL support, so I’ll be updating my setup to route traffic through a local MQTT broker on my Tailscale network to the cloud-based Home Assistant VM, and once I do that I’ll close the open MQTT port on the VM. I've walked through how I did that below under _Optional: Secure MQTT Relay Setup on macOS over Tailnet_.
 
 ---
-
-Enjoy monitoring your solar system with this customized dashboard! 🚀
-
----
-Here’s the **optional setup for installing MQTT as a relay on macOS** to ensure encrypted data transmission from your **dongle to a Tailscale VM**. Below are both versions — one with placeholders and one with your actual credentials. Add these steps at the **end of the README**, under a new section titled **"Optional: Secure MQTT Relay Setup on macOS"**.
-
----
-
 ### Optional: Secure MQTT Relay Setup on macOS over Tailnet 🔐
 This guide explains how to configure a Mac mini on your Tailscale network as an MQTT relay, allowing local data transmission from the dongle to the Mac mini without encryption, and securely forwarding the data from the Mac mini to a Tailscale-connected VM.
 
@@ -371,3 +364,38 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
    ```bash
    sudo ufw deny 1883/tcp
    ```
+### **Troubleshooting Homebrew Services Issue**
+
+On macOS, if you encounter the following error during the Mosquitto installation:  
+```bash
+brew services start mosquitto
+==> Tapping homebrew/services
+fatal: destination path '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-services' already exists and is not an empty directory.
+Error: Failure while executing; git clone https://github.com/Homebrew/homebrew-services /usr/local/Homebrew/Library/Taps/homebrew/homebrew-services --origin=origin --template= --config core.fsmonitor=false exited with 128.
+Error: Failure while executing; /usr/local/bin/brew tap homebrew/services exited with 1.
+```
+
+**Solution:**
+
+1. **Remove the conflicting `homebrew-services` tap:**
+   ```bash
+   rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-services
+   ```
+
+2. **Reinstall the tap:**
+   ```bash
+   brew tap homebrew/services
+   ```
+
+3. **Start the Mosquitto service again:**
+   ```bash
+   brew services start mosquitto
+   ```
+
+4. **Verify Mosquitto is running:**
+   ```bash
+   brew services list
+   ```
+---
+
+Enjoy monitoring your solar system with this customized dashboard and more secure Tailscale setup! 🚀
