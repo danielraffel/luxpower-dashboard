@@ -77,13 +77,13 @@ template:
       - name: "Last Bank Update (Formatted)"
         state: >
           {% set utc_time = states('sensor.dongle_40_4c_ca_4c_XX_XX_last_bank_update') %}
-          {% set pst_time = utc_time | as_timestamp | timestamp_custom('%b %d %-I:%M %p', true) %}
+          {% set pst_time = utc_time | as_timestamp | timestamp_custom('%-I:%M %p on %a, %b %-d', true) %}
           {{ pst_time }}
 ```
 
 The formatted timestamp will now display as:  
 ```
-Oct 27 9:30 AM
+9:30 AM on Mon, Oct 27 
 ```
 
 > **Important Note:**  
