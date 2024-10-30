@@ -349,7 +349,7 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
    ```conf
    # Listener for local MQTT traffic
    listener 1883 0.0.0.0
-   allow_anonymous true
+   allow_anonymous false
 
    # Bridge configuration to relay to Tailscale VM
    connection tailscale_bridge
@@ -367,7 +367,7 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
 4. **Configure the Dongle:**
    - **MQTT Server**: IP of the Mac mini (e.g., `192.168.x.x`)
    - **Port**: 1883  
-   - **Credentials**: Leave blank if `allow_anonymous true` is used.
+   - **Credentials**: set to `allow_anonymous false` since a username/password is required and is more secure.
 
 5. **Update the GCP Firewall Rule:**
    - In the Google Cloud Console, go to VPC network → Firewall rules and update the existing rule. Since Tailscale IPs are stable but not guaranteed to be static, it’s recommended to allow the entire Tailscale subnet in your GCP firewall rule to ensure consistent connectivity. While you can use the Mac mini’s specific Tailscale IP, be aware that it could change, requiring you to update the rule if it stops working.
