@@ -400,6 +400,10 @@ I got the list of items by running this command using my dongle serial in [HA De
 {% endfor %}
 ```
 
+This dashboard displays around 240 settings in a top-level read-only view, complete with tooltips that are exposed on desktop. By tapping on a setting, you can adjust it, view graphs, access entity names, and more. Handy alternative to the EG4 monitoring site.
+<img width="1246" alt="image" src="https://github.com/user-attachments/assets/cee00ab9-a9fe-479c-a3dd-084b433d45d6">
+
+
 ---
 
 
