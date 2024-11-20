@@ -8391,6 +8391,662 @@ views:
                 }
           - type: custom:mushroom-entity-card
             entity: select.dongle_40_4c_ca_4c_XX_XX_time16
+            name: 08:00 -- 08:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 08:00 to 08:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time17
+            name: 08:30 -- 09:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 08:30 to 09:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time18
+            name: 09:00 -- 09:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 09:00 to 09:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time19
+            name: 09:30 -- 10:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 09:30 to 10:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time20
+            name: 10:00 -- 10:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 10:00 to 10:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time21
+            name: 10:30 -- 11:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 10:30 to 11:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time22
+            name: 11:00 -- 11:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 11:00 to 11:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time23
+            name: 11:30 -- 12:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 11:30 to 12:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time24
+            name: 12:00 -- 12:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 12:00 to 12:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time25
+            name: 12:30 -- 13:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 12:30 to 13:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time26
+            name: 13:00 -- 13:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 13:00 to 13:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time27
+            name: 13:30 -- 14:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 13:30 to 14:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time28
+            name: 14:00 -- 14:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 14:00 to 14:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time29
+            name: 14:30 -- 15:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 14:30 to 15:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time30
+            name: 15:00 -- 15:30
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 15:00 to 15:30";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time31
+            name: 15:30 -- 16:00
+            icon: mdi:clock-outline
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                ha-card {
+                  --hover-text: "Schedule configuration for 15:30 to 16:00";
+                } mushroom-state-item {
+                  position: relative;
+                } mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                } @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: var(--hover-text);
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                } @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time32
             name: 16:00 -- 16:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -8431,7 +9087,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time17
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time33
             name: 16:30 -- 17:00
             icon: mdi:clock-outline
             layout: horizontal
@@ -8472,7 +9128,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time18
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time34
             name: 17:00 -- 17:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -8513,7 +9169,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time19
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time35
             name: 17:30 -- 18:00
             icon: mdi:clock-outline
             layout: horizontal
@@ -8554,7 +9210,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time20
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time36
             name: 18:00 -- 18:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -8595,7 +9251,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time21
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time37
             name: 18:30 -- 19:00
             icon: mdi:clock-outline
             layout: horizontal
@@ -8636,7 +9292,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time22
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time38
             name: 19:00 -- 19:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -8677,7 +9333,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time23
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time39
             name: 19:30 -- 20:00
             icon: mdi:clock-outline
             layout: horizontal
@@ -8718,7 +9374,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time24
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time40
             name: 20:00 -- 20:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -8759,7 +9415,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time25
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time41
             name: 20:30 -- 21:00
             icon: mdi:clock-outline
             layout: horizontal
@@ -8800,7 +9456,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time26
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time42
             name: 21:00 -- 21:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -8841,7 +9497,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time27
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time43
             name: 21:30 -- 22:00
             icon: mdi:clock-outline
             layout: horizontal
@@ -8882,7 +9538,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time28
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time44
             name: 22:00 -- 22:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -8923,7 +9579,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time29
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time45
             name: 22:30 -- 23:00
             icon: mdi:clock-outline
             layout: horizontal
@@ -8964,7 +9620,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time30
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time46
             name: 23:00 -- 23:30
             icon: mdi:clock-outline
             layout: horizontal
@@ -9005,7 +9661,7 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: select.dongle_40_4c_ca_4c_XX_XX_time31
+            entity: select.dongle_40_4c_ca_4c_XX_XX_time47
             name: 23:30 -- 24:00
             icon: mdi:clock-outline
             layout: horizontal
