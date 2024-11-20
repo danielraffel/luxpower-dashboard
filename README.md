@@ -66,7 +66,7 @@ Note: Additional grid indicators explained [here](https://github.com/DanteWinter
 9. **Simple Weather Card via HACS**  
    Install the Simple Weather card to get todays weather data for your home.
 
-10. **Lovelace Card Mod3: Required only for EG4 Dashboard Settings which is optional**
+10. **Lovelace Card Mod3: Required only for EG4 Dashboard Settings which is optional**  
    Install [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod) through HACS to apply CSS styles to various elements of the Home Assistant frontend dashboards.
 
 ---
