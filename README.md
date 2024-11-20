@@ -15,6 +15,7 @@
   - [Docker Compose Configuration](#docker-compose-configuration)
 - [Directory Structure and Files](#directory-structure-and-files)
 - [Additional Notes About my Setup](#additional-notes-about-my-setup)
+- [Optional: EG4 Dashboard Settings](#optional-eg4-dashboard-settings)
 - [Optional: Secure MQTT Relay Setup on macOS over Tailnet 🔐](#optional-secure-mqtt-relay-setup-on-macos-over-tailnet-)
   - [Steps to Set Up the Relay](#steps-to-set-up-the-relay)
 - [Troubleshooting Homebrew Services Issue](#troubleshooting-homebrew-services-issue)
@@ -383,6 +384,18 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
      ```bash
      mosquitto_pub -h 192.168.x.x -p 1883 -t "test/topic" -m "Hello MQTT!"
      ```
+### **Optional: EG4 Dashboard Settings**
+I wanted a list of all EG4 settings exposed in Home Assistant on a single page so I created [dashboard_settings.yaml](https://github.com/danielraffel/luxpower-dashboard/blob/main/dashboard_settings.yaml)
+
+I got the list of items by running this command using my dongle serial in [HA DevTools](https://www.home-assistant.io/docs/tools/dev-tools/)
+```
+{% for state in states %}
+  {% if "dongle_40_4c_ca_4c_XX_XX" in state.entity_id %}
+    {{ state.name }}
+    {{ state.entity_id }}
+  {% endif %}
+{% endfor %}
+```
 
 ### **Troubleshooting Homebrew Services Issue**
 
