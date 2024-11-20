@@ -384,6 +384,9 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
      ```bash
      mosquitto_pub -h 192.168.x.x -p 1883 -t "test/topic" -m "Hello MQTT!"
      ```
+
+---
+
 ### **Optional: EG4 Dashboard Settings**
 I wanted a list of all EG4 settings exposed in Home Assistant on a single page so I created [dashboard_settings.yaml](https://github.com/danielraffel/luxpower-dashboard/blob/main/dashboard_settings.yaml)
 
@@ -396,6 +399,9 @@ I got the list of items by running this command using my dongle serial in [HA De
   {% endif %}
 {% endfor %}
 ```
+
+---
+
 
 ### **Troubleshooting Homebrew Services Issue**
 
