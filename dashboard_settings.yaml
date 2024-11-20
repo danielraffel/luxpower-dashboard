@@ -7171,6 +7171,384 @@ views:
                     display: none;
                   }
                 }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_epsvoltl1n
+            name: EPS Voltage L1N
+            icon: mdi:lightning-bolt
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "L1/Neutral line voltage in Emergency Power Supply mode";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_epsvoltl2n
+            name: EPS Voltage L2N
+            icon: mdi:lightning-bolt
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "L2/Neutral line voltage in Emergency Power Supply mode";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_peps
+            name: Power EPS
+            icon: mdi:power-plug
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Total power output in Emergency Power Supply mode";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_peps_l1n
+            name: Power EPS L1N
+            icon: mdi:power-plug
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "L1/Neutral line power in Emergency Power Supply mode";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_peps_l2n
+            name: Power EPS L2N
+            icon: mdi:power-plug
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "L2/Neutral line power in Emergency Power Supply mode";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: switch.dongle_40_4c_ca_4c_XX_XX_swseamlessly
+            name: Seamless Off-grid Mode
+            icon: mdi:toggle-switch
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Enable/disable smooth transition to off-grid operation";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_vepsr
+            name: Voltage EPS R
+            icon: mdi:lightning-bolt
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Emergency Power Supply R phase voltage";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_vepss
+            name: Voltage EPS S
+            icon: mdi:lightning-bolt
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Emergency Power Supply S phase voltage";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_vepst
+            name: Voltage EPS T
+            icon: mdi:lightning-bolt
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Emergency Power Supply T phase voltage";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
       - type: entities
         title: Safety and Protection Metrics
         show_header_toggle: false
@@ -7202,6 +7580,174 @@ views:
                 @media (hover: hover) {
                   mushroom-state-item:hover::before {
                     content: "Enable/disable ground fault detection system";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_afci_currch1
+            name: Arc Fault Current CH1
+            icon: mdi:flash-alert
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Arc fault current detection for Channel 1";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_afci_currch2
+            name: Arc Fault Current CH2
+            icon: mdi:flash-alert
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Arc fault current detection for Channel 2";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_afci_currch3
+            name: Arc Fault Current CH3
+            icon: mdi:flash-alert
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Arc fault current detection for Channel 3";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: sensor.dongle_40_4c_ca_4c_XX_XX_afci_currch4
+            name: Arc Fault Current CH4
+            icon: mdi:flash-alert
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Arc fault current detection for Channel 4";
                     width: auto;
                     min-width: 200px;
                     background: var(--card-background-color);
