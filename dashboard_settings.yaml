@@ -176,48 +176,6 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: time.dongle_40_4c_ca_4c_XX_XX_acchgstart2
-            name: AC Charge Start2
-            icon: mdi:clock-start
-            layout: horizontal
-            fill_container: true
-            primary_info: name
-            secondary_info: state
-            icon_type: icon
-            tap_action:
-              action: more-info
-            card_mod:
-              style: |
-                mushroom-state-item {
-                  position: relative;
-                }
-                mushroom-state-item::before {
-                  content: "ⓘ";
-                  position: absolute;
-                  right: 16px;
-                  top: 8px;
-                  color: var(--primary-text-color);
-                  cursor: help;
-                }
-                @media (hover: hover) {
-                  mushroom-state-item:hover::before {
-                    content: "Second time window start point for AC charging schedule";
-                    width: auto;
-                    min-width: 200px;
-                    background: var(--card-background-color);
-                    padding: 8px;
-                    border-radius: 4px;
-                    box-shadow: var(--ha-card-box-shadow);
-                    font-size: 14px;
-                    z-index: 999;
-                  }
-                }
-                @media (hover: none) {
-                  mushroom-state-item::before {
-                    display: none;
-                  }
-                }
-          - type: custom:mushroom-entity-card
             entity: time.dongle_40_4c_ca_4c_XX_XX_acchgend1
             name: AC Charge End1
             icon: mdi:clock-end
@@ -244,6 +202,48 @@ views:
                 @media (hover: hover) {
                   mushroom-state-item:hover::before {
                     content: "First time window end point for AC charging schedule";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: time.dongle_40_4c_ca_4c_XX_XX_acchgstart2
+            name: AC Charge Start2
+            icon: mdi:clock-start
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Second time window start point for AC charging schedule";
                     width: auto;
                     min-width: 200px;
                     background: var(--card-background-color);
@@ -470,132 +470,6 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
-            entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirstend
-            name: Charge Priority End
-            icon: mdi:clock-end
-            layout: horizontal
-            fill_container: true
-            primary_info: name
-            secondary_info: state
-            icon_type: icon
-            tap_action:
-              action: more-info
-            card_mod:
-              style: |
-                mushroom-state-item {
-                  position: relative;
-                }
-                mushroom-state-item::before {
-                  content: "ⓘ";
-                  position: absolute;
-                  right: 16px;
-                  top: 8px;
-                  color: var(--primary-text-color);
-                  cursor: help;
-                }
-                @media (hover: hover) {
-                  mushroom-state-item:hover::before {
-                    content: "Primary end time for priority charging period";
-                    width: auto;
-                    min-width: 200px;
-                    background: var(--card-background-color);
-                    padding: 8px;
-                    border-radius: 4px;
-                    box-shadow: var(--ha-card-box-shadow);
-                    font-size: 14px;
-                    z-index: 999;
-                  }
-                }
-                @media (hover: none) {
-                  mushroom-state-item::before {
-                    display: none;
-                  }
-                }
-          - type: custom:mushroom-entity-card
-            entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirstend1
-            name: Charge Priority End1
-            icon: mdi:clock-end
-            layout: horizontal
-            fill_container: true
-            primary_info: name
-            secondary_info: state
-            icon_type: icon
-            tap_action:
-              action: more-info
-            card_mod:
-              style: |
-                mushroom-state-item {
-                  position: relative;
-                }
-                mushroom-state-item::before {
-                  content: "ⓘ";
-                  position: absolute;
-                  right: 16px;
-                  top: 8px;
-                  color: var(--primary-text-color);
-                  cursor: help;
-                }
-                @media (hover: hover) {
-                  mushroom-state-item:hover::before {
-                    content: "First time window end for priority charging";
-                    width: auto;
-                    min-width: 200px;
-                    background: var(--card-background-color);
-                    padding: 8px;
-                    border-radius: 4px;
-                    box-shadow: var(--ha-card-box-shadow);
-                    font-size: 14px;
-                    z-index: 999;
-                  }
-                }
-                @media (hover: none) {
-                  mushroom-state-item::before {
-                    display: none;
-                  }
-                }
-          - type: custom:mushroom-entity-card
-            entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirstend2
-            name: Charge Priority End2
-            icon: mdi:clock-end
-            layout: horizontal
-            fill_container: true
-            primary_info: name
-            secondary_info: state
-            icon_type: icon
-            tap_action:
-              action: more-info
-            card_mod:
-              style: |
-                mushroom-state-item {
-                  position: relative;
-                }
-                mushroom-state-item::before {
-                  content: "ⓘ";
-                  position: absolute;
-                  right: 16px;
-                  top: 8px;
-                  color: var(--primary-text-color);
-                  cursor: help;
-                }
-                @media (hover: hover) {
-                  mushroom-state-item:hover::before {
-                    content: "Second time window end for priority charging";
-                    width: auto;
-                    min-width: 200px;
-                    background: var(--card-background-color);
-                    padding: 8px;
-                    border-radius: 4px;
-                    box-shadow: var(--ha-card-box-shadow);
-                    font-size: 14px;
-                    z-index: 999;
-                  }
-                }
-                @media (hover: none) {
-                  mushroom-state-item::before {
-                    display: none;
-                  }
-                }
-          - type: custom:mushroom-entity-card
             entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirststart
             name: Charge Priority Start
             icon: mdi:clock-start
@@ -622,6 +496,48 @@ views:
                 @media (hover: hover) {
                   mushroom-state-item:hover::before {
                     content: "Primary start time for priority charging period";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirstend
+            name: Charge Priority End
+            icon: mdi:clock-end
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Primary end time for priority charging period";
                     width: auto;
                     min-width: 200px;
                     background: var(--card-background-color);
@@ -680,6 +596,48 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
+            entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirstend1
+            name: Charge Priority End1
+            icon: mdi:clock-end
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "First time window end for priority charging";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
             entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirststart2
             name: Charge Priority Start2
             icon: mdi:clock-start
@@ -722,6 +680,48 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
+            entity: time.dongle_40_4c_ca_4c_XX_XX_chgfirstend2
+            name: Charge Priority End2
+            icon: mdi:clock-end
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Second time window end for priority charging";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
             entity: switch.dongle_40_4c_ca_4c_XX_XX_forceddischg
             name: Force Discharge
             icon: mdi:battery-minus
@@ -748,132 +748,6 @@ views:
                 @media (hover: hover) {
                   mushroom-state-item:hover::before {
                     content: "Manual override for battery discharge";
-                    width: auto;
-                    min-width: 200px;
-                    background: var(--card-background-color);
-                    padding: 8px;
-                    border-radius: 4px;
-                    box-shadow: var(--ha-card-box-shadow);
-                    font-size: 14px;
-                    z-index: 999;
-                  }
-                }
-                @media (hover: none) {
-                  mushroom-state-item::before {
-                    display: none;
-                  }
-                }
-          - type: custom:mushroom-entity-card
-            entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgend
-            name: Force Discharge End
-            icon: mdi:clock-end
-            layout: horizontal
-            fill_container: true
-            primary_info: name
-            secondary_info: state
-            icon_type: icon
-            tap_action:
-              action: more-info
-            card_mod:
-              style: |
-                mushroom-state-item {
-                  position: relative;
-                }
-                mushroom-state-item::before {
-                  content: "ⓘ";
-                  position: absolute;
-                  right: 16px;
-                  top: 8px;
-                  color: var(--primary-text-color);
-                  cursor: help;
-                }
-                @media (hover: hover) {
-                  mushroom-state-item:hover::before {
-                    content: "End time for forced discharge period";
-                    width: auto;
-                    min-width: 200px;
-                    background: var(--card-background-color);
-                    padding: 8px;
-                    border-radius: 4px;
-                    box-shadow: var(--ha-card-box-shadow);
-                    font-size: 14px;
-                    z-index: 999;
-                  }
-                }
-                @media (hover: none) {
-                  mushroom-state-item::before {
-                    display: none;
-                  }
-                }
-          - type: custom:mushroom-entity-card
-            entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgend1
-            name: Force Discharge End1
-            icon: mdi:clock-end
-            layout: horizontal
-            fill_container: true
-            primary_info: name
-            secondary_info: state
-            icon_type: icon
-            tap_action:
-              action: more-info
-            card_mod:
-              style: |
-                mushroom-state-item {
-                  position: relative;
-                }
-                mushroom-state-item::before {
-                  content: "ⓘ";
-                  position: absolute;
-                  right: 16px;
-                  top: 8px;
-                  color: var(--primary-text-color);
-                  cursor: help;
-                }
-                @media (hover: hover) {
-                  mushroom-state-item:hover::before {
-                    content: "First time window end for forced discharge";
-                    width: auto;
-                    min-width: 200px;
-                    background: var(--card-background-color);
-                    padding: 8px;
-                    border-radius: 4px;
-                    box-shadow: var(--ha-card-box-shadow);
-                    font-size: 14px;
-                    z-index: 999;
-                  }
-                }
-                @media (hover: none) {
-                  mushroom-state-item::before {
-                    display: none;
-                  }
-                }
-          - type: custom:mushroom-entity-card
-            entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgend2
-            name: Force Discharge End2
-            icon: mdi:clock-end
-            layout: horizontal
-            fill_container: true
-            primary_info: name
-            secondary_info: state
-            icon_type: icon
-            tap_action:
-              action: more-info
-            card_mod:
-              style: |
-                mushroom-state-item {
-                  position: relative;
-                }
-                mushroom-state-item::before {
-                  content: "ⓘ";
-                  position: absolute;
-                  right: 16px;
-                  top: 8px;
-                  color: var(--primary-text-color);
-                  cursor: help;
-                }
-                @media (hover: hover) {
-                  mushroom-state-item:hover::before {
-                    content: "Second time window end for forced discharge";
                     width: auto;
                     min-width: 200px;
                     background: var(--card-background-color);
@@ -1352,6 +1226,48 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
+            entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgend
+            name: Force Discharge End
+            icon: mdi:clock-end
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "End time for forced discharge period";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
             entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgstart1
             name: Force Discharge Start1
             icon: mdi:clock-start
@@ -1394,6 +1310,48 @@ views:
                   }
                 }
           - type: custom:mushroom-entity-card
+            entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgend1
+            name: Force Discharge End1
+            icon: mdi:clock-end
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "First time window end for forced discharge";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
             entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgstart2
             name: Force Discharge Start2
             icon: mdi:clock-start
@@ -1420,6 +1378,48 @@ views:
                 @media (hover: hover) {
                   mushroom-state-item:hover::before {
                     content: "Second time window start for forced discharge";
+                    width: auto;
+                    min-width: 200px;
+                    background: var(--card-background-color);
+                    padding: 8px;
+                    border-radius: 4px;
+                    box-shadow: var(--ha-card-box-shadow);
+                    font-size: 14px;
+                    z-index: 999;
+                  }
+                }
+                @media (hover: none) {
+                  mushroom-state-item::before {
+                    display: none;
+                  }
+                }
+          - type: custom:mushroom-entity-card
+            entity: time.dongle_40_4c_ca_4c_XX_XX_forceddischgend2
+            name: Force Discharge End2
+            icon: mdi:clock-end
+            layout: horizontal
+            fill_container: true
+            primary_info: name
+            secondary_info: state
+            icon_type: icon
+            tap_action:
+              action: more-info
+            card_mod:
+              style: |
+                mushroom-state-item {
+                  position: relative;
+                }
+                mushroom-state-item::before {
+                  content: "ⓘ";
+                  position: absolute;
+                  right: 16px;
+                  top: 8px;
+                  color: var(--primary-text-color);
+                  cursor: help;
+                }
+                @media (hover: hover) {
+                  mushroom-state-item:hover::before {
+                    content: "Second time window end for forced discharge";
                     width: auto;
                     min-width: 200px;
                     background: var(--card-background-color);
