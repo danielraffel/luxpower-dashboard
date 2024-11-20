@@ -66,6 +66,9 @@ Note: Additional grid indicators explained [here](https://github.com/DanteWinter
 9. **Simple Weather Card via HACS**  
    Install the Simple Weather card to get todays weather data for your home.
 
+10. **Rquired for EG4 Dashboard Settings (which is optional): Lovelace Card Mod3**
+   Install [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod) through HACS to apply CSS styles to various elements of the Home Assistant frontend dashboards.
+
 ---
 
 ## Setup Overview
@@ -388,6 +391,8 @@ This guide explains how to configure a Mac mini on your Tailscale network as an 
 ---
 
 ### **Optional: EG4 Dashboard Settings**
+_This requires installing [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod) through HACS to apply CSS styles._
+
 I wanted a list of all EG4 settings exposed in Home Assistant on a single page so I created [dashboard_settings.yaml](https://github.com/danielraffel/luxpower-dashboard/blob/main/dashboard_settings.yaml)
 
 I got the list of items by running this command using my dongle serial in [HA DevTools](https://www.home-assistant.io/docs/tools/dev-tools/)
