@@ -92,6 +92,14 @@ You’ll need to replace every instance of the **dongle MacID** (`dongle_40_4c_c
 
 Once the prerequisites are satisfied, copy and paste the content of `lux.yaml` into a dashboard view in Home Assistant.
 
+**Feb 2025 Update:** In version >=1.6 of the [Lux Power Distribution Card](https://github.com/DanteWinters/lux-power-distribution-card) you can now display the internal temp of your inverter. I'm not interested in monitoring that but you can easily add it to your lux.yaml dashboard using this sensor with your own unique dongle MacID:
+
+```
+        temp:
+          is_used: true
+          entities:
+            - sensor.dongle_40_4c_XX_XX_XX_XX_tinner
+```
 ---
 
 ### 2. Adjust the Time Display  
